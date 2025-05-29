@@ -1,0 +1,21 @@
+#+title: Raylib Template
+
+* Install vcpkg
+#+begin_src shell
+  git clone https://github.com/microsoft/vcpkg.git
+  cd vcpkg
+  .\bootstrap-vcpkg.bat
+#+end_src
+* Add vcpkg to path
+#+begin_src shell
+  $env:VCPKG_ROOT = "C:\path\to\vcpkg"
+  $env:PATH = "$env:VCPKG_ROOT;$env:PATH"
+#+end_src
+
+To permanently add vcpkg to path use windows system environmental variables panel
+* Raylib Install
+#+begin_src shell
+  vcpkg install raylib:x64-windows-static glfw3:x64-windows-static
+#+end_src
+* Build Update
+Ensure that all variables are fully updated such `vcpkg_root`
